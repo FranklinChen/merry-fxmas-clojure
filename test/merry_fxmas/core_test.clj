@@ -1,6 +1,6 @@
 (ns merry-fxmas.core-test
-  (:use midje.sweet
-        merry-fxmas.core))
+  (:use midje.sweet)
+  (:use [merry-fxmas.core]))
 
 (fact
  (repeat-greeting 3)

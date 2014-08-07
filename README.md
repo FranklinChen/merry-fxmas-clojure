@@ -22,4 +22,5 @@ $ lein run
 
 Copyright © 2012 Franklin Chen
 
-Distributed under the Eclipse Public License, the same as Clojure.
+Distributed under the Eclipse Public License either version 1.0 or (at
+your option) any later version.
