@@ -1,7 +1,8 @@
+sudo: false
 jdk:
   - oraclejdk8
-  - oraclejdk7
-  - openjdk7
 language: clojure
-lein: lein2
-script: lein2 midje
+cache:
+  directories:
+  - $HOME/.m2
+script: lein midje
