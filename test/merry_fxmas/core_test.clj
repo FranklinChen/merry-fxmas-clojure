@@ -4,9 +4,9 @@
 
 (deftest a-test
   (testing "Macro expansion of repeat-greeting."
-    (is
-     (macroexpand '(repeat-greeting 3))
-     '(do
-        (clojure.core/printf "Merry Christmas Bill %s!\n" 3)
-        (clojure.core/printf "Merry Christmas Bill %s!\n" 2)
-        (clojure.core/printf "Merry Christmas Bill %s!\n" 1)))))
+  (is
+   (= '(do
+         (clojure.core/printf "Merry Christmas Bill %s!\n" 3)
+         (clojure.core/printf "Merry Christmas Bill %s!\n" 2)
+         (clojure.core/printf "Merry Christmas Bill %s!\n" 1))
+      (macroexpand-1 '(merry-fxmas.core/repeat-greeting 3))))))
