@@ -1,13 +1,12 @@
 (ns merry-fxmas.core-test
-  (:use midje.sweet)
-  (:use [merry-fxmas.core]))
+  (:require [clojure.test :refer :all]
+            [merry-fxmas.core :refer :all]))
 
-(fact
- (repeat-greeting 3)
-
- =expands-to=>
-
- (do
-   (clojure.core/printf "Merry Christmas Bill %s!\n" 3)
-   (clojure.core/printf "Merry Christmas Bill %s!\n" 2)
-   (clojure.core/printf "Merry Christmas Bill %s!\n" 1)))
+(deftest a-test
+  (testing "Macro expansion of repeat-greeting."
+    (is
+     (macroexpand '(repeat-greeting 3))
+     '(do
+        (clojure.core/printf "Merry Christmas Bill %s!\n" 3)
+        (clojure.core/printf "Merry Christmas Bill %s!\n" 2)
+        (clojure.core/printf "Merry Christmas Bill %s!\n" 1)))))

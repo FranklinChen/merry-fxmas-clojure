@@ -9,7 +9,7 @@ Say "Merry Christmas" 25 times counting down, using a macro to unroll the loop.
 A simplistic test:
 
 ``` console
-$ lein midje --lazytest
+$ lein test
 ```
 
 To see the output:
