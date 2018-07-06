@@ -1,9 +1,9 @@
 sudo: false
 jdk:
   - oraclejdk10
-  - openjdk10
+#  - openjdk10
   - oraclejdk9
-  - openjdk9
+#  - openjdk9
   - oraclejdk8
   - openjdk8
 language: clojure
